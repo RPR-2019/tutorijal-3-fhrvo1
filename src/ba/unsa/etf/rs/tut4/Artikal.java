@@ -25,6 +25,7 @@ public class Artikal {
     }
 
     public static void izbaciDuplikate(ArrayList<Artikal> lista) {
+
     }
 
     public String getSifra(){
