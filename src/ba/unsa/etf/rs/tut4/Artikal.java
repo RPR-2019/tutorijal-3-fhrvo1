@@ -9,11 +9,11 @@ public class Artikal {
 
     public Artikal(String unos) {
         String[] red = unos.split("\n");
-        for (int i=0; i<red.length(); i++) {
+        for (int i = 0; i < red.length; i++) {
             String[] atributi = red[i].split(",");
             setSifra(atributi[0]);
             setNaziv(atributi[1]);
-            setCijena(atributi[2]);
+            setCijena(Double.parseDouble(atributi[2]));
         }
     }
 
