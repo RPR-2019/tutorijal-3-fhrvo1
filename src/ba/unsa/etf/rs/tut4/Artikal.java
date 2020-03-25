@@ -1,10 +1,11 @@
 package ba.unsa.etf.rs.tut4;
 
+import java.util.ArrayList;
+
 public class Artikal {
         private String sifra;
         private String naziv;
         private double cijena;
-
 
 
     public Artikal(String unos) {
@@ -15,6 +16,15 @@ public class Artikal {
             setNaziv(atributi[1]);
             setCijena(Double.parseDouble(atributi[2]));
         }
+    }
+
+    public Artikal(String abc, String proizvod, double i) {
+        setSifra(abc);
+        setNaziv(proizvod);
+        setCijena(i);
+    }
+
+    public static void izbaciDuplikate(ArrayList<Artikal> lista) {
     }
 
     public String getSifra(){
