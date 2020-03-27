@@ -1,6 +1,7 @@
 package ba.unsa.etf.rs.tut4;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Artikal {
         private String sifra;
@@ -53,5 +54,20 @@ public class Artikal {
     public void setCijena(double cijena) {
         if (cijena<0) throw new IllegalArgumentException("Cijena je negativna");
         this.cijena = cijena;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Artikal artikal = (Artikal) o;
+        return Double.compare(artikal.cijena, cijena) == 0 &&
+                Objects.equals(sifra, artikal.sifra) &&
+                Objects.equals(naziv, artikal.naziv);
+    }
+
+    @Override
+    public String toString() {
+        return sifra + "," + naziv + "," + cijena;
     }
 }
