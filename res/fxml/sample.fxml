@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
-         tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
-         fx:controller="ba.unsa.etf.rs.tut4.Controller">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rs.tut4.Controller">
     <tabs>
         <Tab text="Artikli">
             <content>
@@ -34,17 +33,34 @@
             <content>
             <GridPane>
                <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="345.0" minWidth="10.0" prefWidth="125.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="475.0" minWidth="10.0" prefWidth="475.0" />
                </columnConstraints>
                <rowConstraints>
-                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="190.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="188.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="212.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="207.0" minHeight="10.0" prefHeight="192.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="64.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Button layoutX="182.0" layoutY="121.0" mnemonicParsing="false" text="Button" />
+                        <Label layoutX="40.0" layoutY="21.0" prefHeight="17.0" prefWidth="46.0" text="Artikal:" />
                      </children>
                   </AnchorPane>
+                  <Label text="Količina:" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label text="Aktuelni račun:" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                  <TextArea maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="25.0" />
+                     </GridPane.margin>
+                  </TextArea>
+                  <Button mnemonicParsing="false" text="Dodaj" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="25.0" />
+                     </GridPane.margin>
+                  </Button>
                </children>
             </GridPane>
             </content>

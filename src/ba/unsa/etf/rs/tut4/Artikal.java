@@ -9,16 +9,6 @@ public class Artikal {
         private double cijena;
 
 
-    public Artikal(String unos) {
-        String[] red = unos.split("\n");
-        for (int i = 0; i < red.length; i++) {
-            String[] atributi = red[i].split(",");
-            setSifra(atributi[0]);
-            setNaziv(atributi[1]);
-            setCijena(Double.parseDouble(atributi[2]));
-        }
-    }
-
     public Artikal(String abc, String proizvod, double i) {
         setSifra(abc);
         setNaziv(proizvod);
